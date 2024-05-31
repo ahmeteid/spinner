@@ -1,0 +1,75 @@
+:root {
+    --menu-width: 30px;
+    --menu-padding: 10px;
+    --timing-animation: .8s;
+    --bg-color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+}
+
+.spinner {
+    position: relative;
+    width: var(--menu-width);
+    height: var(--menu-width);
+    background-color: #f1f1f1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.spinner_line {
+    position: absolute;
+    width: calc(var(--menu-width) - var(--menu-padding));
+    height: calc(var(--menu-width) - var(--menu-padding));
+    border-top: var(--menu-padding) solid #0052EB;
+    border-left: var(--menu-padding) solid #0052EB;
+    animation: spin var(--timing-animation) infinite;
+    -webkit-animation: spin var(--timing-animation) infinite linear;
+}
+
+.spinner_circle {
+    position: relative;
+    width: calc(var(--menu-width) - var(--menu-padding));
+    height: calc(var(--menu-width) - var(--menu-padding));
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
